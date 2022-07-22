@@ -9,6 +9,7 @@ import { GlobalFuncs } from './utils/global-funcs';
 import { HardcodedStrings } from './utils/template-strings';
 import { ThemeComponent } from './components/theme-component';
 import { pluginOptions } from './utils/options';
+import { join } from 'path'
 
 export * from './utils/helpers/localize';
 
@@ -76,7 +77,7 @@ function registerHardcodedTemplateStrings(options) {
         return;
     }
 
-    const templateStrings = fs.readJsonSync(shellStringsFilePath);
+    const templateStrings = fs.readJsonSync(join(__dirname, './template-strings.json'));
     
     HardcodedStrings.setLocal(local);
     HardcodedStrings.setTemplateStrings(templateStrings);
