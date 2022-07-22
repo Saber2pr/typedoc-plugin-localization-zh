@@ -73,7 +73,7 @@ function registerHardcodedTemplateStrings(options) {
     const shellStringsFilePath = GlobalFuncs.getCmdLineArgumentValue(options, Constants.TEMPLATE_STRINGS_OPTION);
     const local = GlobalFuncs.getCmdLineArgumentValue(options, Constants.LOCALIZE_OPTION);
 
-    if (!shellStringsFilePath || !local) {
+    if (!local) {
         return;
     }
 
