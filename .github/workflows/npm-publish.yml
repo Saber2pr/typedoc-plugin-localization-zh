@@ -4,7 +4,6 @@
 name: Node.js Deploy
 
 on:
-  workflow_dispatch:
   release:
     types: [created]
 
